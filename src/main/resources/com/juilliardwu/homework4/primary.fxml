@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.juilliardwu.homework4.PrimaryController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuItemOpen" text="Open Department from JSON" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSaveMenuItem" text="Save Department Report to File" />
+              <MenuItem mnemonicParsing="false" onAction="#handleMenuItemClose" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label text="Department">
+         <VBox.margin>
+            <Insets left="5.0" />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="TextFieldDepartment" onAction="#handleMenuItemOpen">
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" top="10.0" />
+         </VBox.margin></TextField>
+      <Label text="Max Hour Name">
+         <VBox.margin>
+            <Insets bottom="10.0" left="5.0" top="10.0" />
+         </VBox.margin></Label>
+      <TextField fx:id="MaxHour">
+         <VBox.margin>
+            <Insets left="5.0" right="5.0" />
+         </VBox.margin>
+      </TextField>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <right>
+            <HBox alignment="BASELINE_LEFT" prefHeight="300.0" prefWidth="617.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Worker">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="5.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ListView fx:id="lv" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleListViewItemsMouseClick" prefHeight="243.0" prefWidth="270.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="10.0" />
+                           </VBox.margin>
+                        </ListView>
+                     </children>
+                  </VBox>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="279.0" prefWidth="329.0">
+                     <children>
+                        <Label text="Selected Workers">
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="Name">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="TextFieldName" />
+                        <Label text="Hour">
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="TextFieldHours" />
+                        <Label text="Rate">
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="TextFieldRate" />
+                        <Label text="Hire Date">
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="TextFieldHireDate" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </right>
+      </BorderPane>
+   </children>
+</VBox>
